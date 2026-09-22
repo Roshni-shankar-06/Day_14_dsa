@@ -24,12 +24,4 @@ class SegmentTree {
   const int n;        // the size of the input array
   const int k;        // the modulo value
   vector<Node> tree;  // the segment tree
-
-  void build(const vector<int>& nums, int cur, int left, int right) {
-    if (left == right) {
-      tree[cur].remain[nums[left]] = 1;
-      tree[cur].prod = nums[left];
-      return;
-    }
-    const int mid = (left + right) / 2;
-    build(nums, 2 * cur + 1, left, mid);
+mid);

@@ -17,6 +17,3 @@ class Foo:
     printSecond()
     self.secondDone.release()
 
-  def third(self, printThird: 'Callable[[], None]') -> None:
-    self.secondDone.acquire()
-    printThird()

@@ -57,25 +57,4 @@ class SegmentTree {
     if (i <= lo && hi <= j)  // [lo, hi] lies completely inside [i, j].
       return tree[treeIndex];
     if (j < lo || hi < i)  // [lo, hi] lies completely outside [i, j].
-      return Node();
-    const int mid = (lo + hi) / 2;
-    return merge(query(2 * treeIndex + 1, lo, mid, i, j),
-                 query(2 * treeIndex + 2, mid + 1, hi, i, j));
-  }
-
-  Node merge(const Node& left, const Node& right) const {
-    Node node;
-    node.prod = (left.prod * right.prod) % k;
-    for (int i = 0; i < k; ++i)
-      node.remain[i] = left.remain[i];
-    for (int i = 0; i < k; ++i)
-      node.remain[(i * left.prod) % k] += right.remain[i];
-    return node;
-  }
-};
-
-class Solution {
- public:
-  vector<int> resultArray(vector<int>& nums, int k,
-
-
+ 

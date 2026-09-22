@@ -33,16 +33,3 @@ class SegmentTree {
     }
     const int mid = (left + right) / 2;
     build(nums, 2 * cur + 1, left, mid);
-    build(nums, 2 * cur + 2, mid + 1, right);
-    tree[cur] = merge(tree[2 * cur + 1], tree[2 * cur + 2]);
-  }
-
-  void update(int treeIndex, int lo, int hi, int i, int val) {
-    if (lo == hi) {
-      for (int j = 0; j < k; ++j)
-        tree[treeIndex].remain[j] = 0;
-      tree[treeIndex].remain[val] = 1;
-      tree[treeIndex].prod = val;
-      return;
-    }
-

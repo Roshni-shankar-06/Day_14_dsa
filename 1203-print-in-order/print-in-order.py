@@ -13,7 +13,5 @@ class Foo:
     self.firstDone.release()
 
   def second(self, printSecond: 'Callable[[], None]') -> None:
-    self.firstDone.acquire()
-    printSecond()
-    self.secondDone.release()
+   
 

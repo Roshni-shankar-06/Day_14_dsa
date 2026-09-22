@@ -8,8 +8,3 @@ class Solution {
         sum += num >> i & 1;
       sum %= 3;
       ans |= sum << i;
-    }
-
-    return ans;
-  }
-}

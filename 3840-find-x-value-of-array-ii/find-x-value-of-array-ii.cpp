@@ -88,15 +88,3 @@ class Solution {
     vector<int> ans;
     SegmentTree tree(nums, k);
 
-    for (const vector<int>& query : queries) {
-      const int index = query[0];
-      const int value = query[1];
-      const int start = query[2];
-      const int x = query[3];
-      tree.update(index, value);
-      ans.push_back(tree.query(start, n - 1).remain[x]);
-    }
-
-    return ans;
-  }
-};

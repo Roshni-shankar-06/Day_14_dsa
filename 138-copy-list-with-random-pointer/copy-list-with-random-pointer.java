@@ -8,9 +8,4 @@ class Solution {
     Node newNode = new Node(head.val);
     map.put(head, newNode);
     newNode.next = copyRandomList(head.next);
-    newNode.random = copyRandomList(head.random);
-    return newNode;
-  }
-
-  private Map<Node, Node> map = new HashMap<>();
-}
+ 

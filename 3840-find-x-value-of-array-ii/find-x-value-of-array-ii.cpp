@@ -77,14 +77,5 @@ class SegmentTree {
 class Solution {
  public:
   vector<int> resultArray(vector<int>& nums, int k,
-                          vector<vector<int>>& queries) {
-    for (int& num : nums)
-      num %= k;
 
-    for (vector<int>& query : queries)
-      query[1] %= k;
-
-    const int n = nums.size();
-    vector<int> ans;
-    SegmentTree tree(nums, k);
 

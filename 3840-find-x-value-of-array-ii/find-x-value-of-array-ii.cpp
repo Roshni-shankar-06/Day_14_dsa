@@ -45,16 +45,4 @@ class SegmentTree {
       tree[treeIndex].prod = val;
       return;
     }
-    const int mid = (lo + hi) / 2;
-    if (i <= mid)
-      update(2 * treeIndex + 1, lo, mid, i, val);
-    else
-      update(2 * treeIndex + 2, mid + 1, hi, i, val);
-    tree[treeIndex] = merge(tree[2 * treeIndex + 1], tree[2 * treeIndex + 2]);
-  }
 
-  Node query(int treeIndex, int lo, int hi, int i, int j) const {
-    if (i <= lo && hi <= j)  // [lo, hi] lies completely inside [i, j].
-      return tree[treeIndex];
-    if (j < lo || hi < i)  // [lo, hi] lies completely outside [i, j].
- 

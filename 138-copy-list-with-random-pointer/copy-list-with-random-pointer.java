@@ -5,7 +5,4 @@ class Solution {
     if (map.containsKey(head))
       return map.get(head);
 
-    Node newNode = new Node(head.val);
-    map.put(head, newNode);
-    newNode.next = copyRandomList(head.next);
- 
+  

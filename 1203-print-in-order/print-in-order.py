@@ -9,9 +9,5 @@ class Foo:
     self.secondDone.acquire()
 
   def first(self, printFirst: 'Callable[[], None]') -> None:
-    printFirst()
-    self.firstDone.release()
-
-  def second(self, printSecond: 'Callable[[], None]') -> None:
-   
+  
 

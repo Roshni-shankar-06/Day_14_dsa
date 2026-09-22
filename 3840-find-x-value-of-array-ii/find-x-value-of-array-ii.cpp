@@ -13,15 +13,4 @@ class SegmentTree {
   // Updates nums[i] to val.
   void update(int i, int val) {
     update(0, 0, n - 1, i, val);
-  }
 
-  // Returns the result of the range query from nums[i..j].
-  Node query(int i, int j) const {
-    return query(0, 0, n - 1, i, j);
-  }
-
- private:
-  const int n;        // the size of the input array
-  const int k;        // the modulo value
-  vector<Node> tree;  // the segment tree
-mid);
